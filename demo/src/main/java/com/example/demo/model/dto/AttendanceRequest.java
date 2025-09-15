@@ -1,23 +1,26 @@
 package com.example.demo.model.dto;
 
+import jakarta.validation.constraints.NotNull;
+
 public class AttendanceRequest {
-    private String studentId;
-    private double latitude;
-    private double longitude;
+    @NotNull
     private Long classId;
 
-    // getter & setter
-    public String getStudentId() { return studentId; }
-    public void setStudentId(String studentId) { this.studentId = studentId; }
+    @NotNull
+    private String studentId; // หรือรหัสนักศึกษา
 
-    public double getLatitude() { return latitude; }
-    public void setLatitude(double latitude) { this.latitude = latitude; }
+    @NotNull
+    private Double latitude;
 
-    public double getLongitude() { return longitude; }
-    public void setLongitude(double longitude) { this.longitude = longitude; }
+    @NotNull
+    private Double longitude;
 
     public Long getClassId() { return classId; }
     public void setClassId(Long classId) { this.classId = classId; }
-
-
+    public String getStudentId() { return studentId; }
+    public void setStudentId(String studentId) { this.studentId = studentId; }
+    public Double getLatitude() { return latitude; }
+    public void setLatitude(Double latitude) { this.latitude = latitude; }
+    public Double getLongitude() { return longitude; }
+    public void setLongitude(Double longitude) { this.longitude = longitude; }
 }
